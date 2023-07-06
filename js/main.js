@@ -13,8 +13,14 @@ Potete ad esempio provare ad usare questo programma per inserire N voti di scuol
 
 // ----- Programma principale -----
 
+//Milestone 1
 let numbersAmount = parseInt(prompt("Quanti numeri vuoi inserire? :"));
-console.log(sommaNumeri(numbersAmount));
+let numberSum = sommaNumeri(numbersAmount);
+console.log("La somma dei numeri scelti è: " + (numberSum));
+
+//Milestone 2
+
+console.log("La loro media è: " + (mediaAritmetica(numberSum, numbersAmount)));
 
 
 // ----- Funzioni -----
@@ -27,5 +33,8 @@ function sommaNumeri(arrayLength) {
         numbersArray.push(num);
         result += num;
     } return result;
+}
 
+function mediaAritmetica(arraySum, nums) {
+    return arraySum / nums;
 }
