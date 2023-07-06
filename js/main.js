@@ -14,20 +14,18 @@ Potete ad esempio provare ad usare questo programma per inserire N voti di scuol
 // ----- Programma principale -----
 
 let numbersAmount = parseInt(prompt("Quanti numeri vuoi inserire? :"));
-let numberUser = parseInt(prompt("Aggiungi un numero:"))
-
-console.log(sommaNumeri(numbersAmount, numberUser));
-
+console.log(sommaNumeri(numbersAmount));
 
 
 // ----- Funzioni -----
 
-function sommaNumeri(arrayLength, num) {
+function sommaNumeri(arrayLength) {
+    let numbersArray = []
     let result = 0;
-    let numbersArray = [];
     for (let i = 0; i < arrayLength; i++) {
+        let num = parseInt(prompt("Aggiungi un numero:"))
         numbersArray.push(num);
-        result = + num;
+        result += num;
     } return result;
 
 }
